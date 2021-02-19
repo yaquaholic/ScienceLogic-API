@@ -15,9 +15,9 @@ import time
 import sys
 
 #Connection details
-root = "https://monitor.cloudsoftcat.com"
-user = 'em7admin'
-passwd = 'Let-Me-In-May2019'
+root = "https://"
+user = ''
+passwd = ''
 
 
 #Disable TLS errors from the output
