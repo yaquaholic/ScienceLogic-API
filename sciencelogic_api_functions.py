@@ -14,9 +14,9 @@ import urllib3
 import time
 
 #Connection details
-root = 'https://monitor.cloudsoftcat.com'
-user = 'api-user'
-passwd = 'q2vB0EK7fweo7adQYlsD'
+root = 'https://<url>'
+user = '<api-user>'
+passwd = '<api-passwd>'
 
 ## API Functions
 
