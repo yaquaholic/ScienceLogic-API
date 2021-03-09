@@ -1,7 +1,7 @@
 # ScienceLogic-API
 
 I've put togther some scripts that I've been using with the ScienceLogic API
-I have created functions for the request calls, within this file you will ned to update the SL! API URL, username and password.
+I have created functions for the request calls, within this file you will ned to update the SL1 API URL, username and password.
 
 Work in progress, bare with me please.... 
 
