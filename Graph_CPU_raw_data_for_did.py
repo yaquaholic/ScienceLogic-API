@@ -19,7 +19,7 @@ cpu_data = sl.get_api(url)
 data = pd.DataFrame(cpu_data['data'])
 data.index=(pd.to_datetime(data.index,unit='s'))
 
-title = "CSC CUG Colector no.2 - CPU Data for the past " + duration
+title = "CPU Data for the past " + duration
 graph = data.plot()
 graph.set_title(title)
 plt.minorticks_on()
