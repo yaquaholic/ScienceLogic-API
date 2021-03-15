@@ -1,6 +1,6 @@
 ################################################################################
 ## Script to extract CPU utilisation data
-##   for DID 8831 as JPG
+##   for DID 8831 as JPG image
 ##
 ## Rich Graham
 ## 2021 03 015
