@@ -1,8 +1,8 @@
-## Extracting CPU data for CSC CUG Colector no 2 (aka 7247)
-## And plot a nice graph for it. 
+## Extracting CPU data for Device ID 6738
+## Data taken from raw collections and plot a graph for it. 
 ## 2021 03 08
 
-from sciencelogic_api_functions import get_api, post_api
+from sciencelogic_api_functions as sl
 import pandas as pd
 import matplotlib.pyplot as plt
 import time
@@ -15,7 +15,7 @@ plt.rcParams["figure.figsize"] = (15,5)                         # <-- Old school
 duration = '192h'
 url = '/api/device/6738/performance_data/7247/data?duration=' + duration + '&hide_options=1'
 
-cpu_data = get_api(url)
+cpu_data = sl.get_api(url)
 data = pd.DataFrame(cpu_data['data'])
 data.index=(pd.to_datetime(data.index,unit='s'))
 
@@ -25,5 +25,5 @@ graph.set_title(title)
 plt.minorticks_on()
 plt.ylabel('%age utilisation')
 plt.xlabel('Date time')
-plt.savefig('CSC-CUG-SLC02_cpu.jpg')
+plt.savefig('did6738_cpu.jpg')
 plt.show()
