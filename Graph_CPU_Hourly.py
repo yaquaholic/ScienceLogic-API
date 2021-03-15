@@ -1,10 +1,9 @@
 ################################################################################
 ## Script to extract CPU utilisation data
-##   for SCT01APP01 aka 8831 
-##   as CSV and JPG and produce html to display it
+##   for DID 8831 as JPG
 ##
 ## Rich Graham
-## 2021 03 01
+## 2021 03 015
 ################################################################################
 
 import sciencelogic_api_functions as sl
@@ -27,11 +26,11 @@ data = data.astype(float)
 #Graph options
 pd.set_option("display.max.columns", None)
 plt.rcParams["figure.figsize"] = (15,5)
-title = "SCT01APP01 CPU Data for the past " + duration + " taken: " + str(datestamp)
+title = "ServerName CPU Data for the past " + duration + " taken: " + str(datestamp)
 graph = data.plot()
 graph.set_title(title)
 plt.minorticks_on()
 plt.ylabel('%age utilisation')
 plt.xlabel('Date time')
-plt.savefig('C:/Users/GrahamR/Downloads/CSC01SLC02_cpu_' + duration + '_' + str(datestamp) + '.jpg')
+plt.savefig('ServerName_cpu_' + duration + '_' + str(datestamp) + '.jpg')
 plt.show()
