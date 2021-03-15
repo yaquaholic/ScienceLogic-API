@@ -1,9 +1,9 @@
 ################################################################################
 ## Script to extract memory utilisation data
-##   for ugl-vmh-917-dch aka 13745 
+##   for DID 13745 
 ##
 ## Rich Graham
-## 2021 03 01
+## 2021 03 15
 ################################################################################
 
 import sciencelogic_api_functions as sl
@@ -26,11 +26,11 @@ data = data.astype(float)
 #Graph options
 pd.set_option("display.max.columns", None)
 plt.rcParams["figure.figsize"] = (15,5)
-title = "UGL-VMH-917-DCH Memory Data for the past " + duration + " taken: " + str(datestamp)
+title = "DB_Server Memory Data for the past " + duration + " taken: " + str(datestamp)
 graph = data.plot()
 graph.set_title(title)
 plt.minorticks_on()
 plt.ylabel('%age utilisation')
 plt.xlabel('Date time')
-plt.savefig('C:/Users/GrahamR/Downloads/UGL-VMH-917-DCH_memory_' + duration + '_' + str(datestamp) + '.jpg')
+plt.savefig('DB_Server_memory_' + duration + '_' + str(datestamp) + '.jpg')
 plt.show()
