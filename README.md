@@ -22,5 +22,7 @@ Adding, deleting or modfiying with the API.
 
 ##SL1 API documentation 
 [ScienceLogic API documentation](https://docs.sciencelogic.com/latest/Content/Web_Content_Dev_and_Integration/ScienceLogic_API/api_intro.htm)
+
 [ScienceLogic API schema](https://documenter.getpostman.com/view/4238205/SWE56ysV)
+
 [ScienceLogic GitHub](https://github.com/ScienceLogic)
