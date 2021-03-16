@@ -10,17 +10,17 @@ I have created functions for the request calls, within this file you will ned to
 3. Any new python scripts can then import sciencelogic_api_functions.
 
 
-##Graphing SL1 data
+## Graphing SL1 data
 
 Any script starting with the owrd Graph does just that, graph data. I've included a few examples that hopefully deal with the various data structures that SL! returns.
 
 
-##Updating SL1
+## Updating SL1
 
 Adding, deleting or modfiying with the API.
 
 
-##SL1 API documentation 
+## SL1 API documentation 
 1. [ScienceLogic API documentation](https://docs.sciencelogic.com/latest/Content/Web_Content_Dev_and_Integration/ScienceLogic_API/api_intro.htm)
 2. [ScienceLogic API schema](https://documenter.getpostman.com/view/4238205/SWE56ysV)
 3. [ScienceLogic GitHub](https://github.com/ScienceLogic)
