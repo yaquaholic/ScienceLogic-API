@@ -6,7 +6,7 @@
 ## 2021 03 16
 ##
 ## You'll need to ensure that a folder called Cisco-5548-01/
-##
+##  exists in your working folder
 ##############################################################
 
 #!/usr/bin/env python
