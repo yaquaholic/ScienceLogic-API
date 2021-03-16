@@ -29,12 +29,12 @@ interfaces = sl.get_api(url)
 
 for interface in interfaces:
     name = interface['description']
-    data_url = root + interface['URI'] + '/interface_data/data?duration=7d&hide_options=1'
+    data_url = interface['URI'] + '/interface_data/data?duration=7d&hide_options=1'
     iid = interface['URI'].replace('/api/device/4540/interface','')
 
     i_data = sl.get_api(data_url)
 
-    data1 = pd.DataFrame(i_data.json()['data'])
+    data1 = pd.DataFrame(i_data['data'])
     data1.index=(pd.to_datetime(data1.index,unit='s'))
     data1 = data1.rename(columns={'d_octets_in': 'Mbps_in', 'd_octets_out': 'Mbps_out'})
     #Convert octets into bits and then convert into Mbits (5 min poll) 
@@ -51,7 +51,6 @@ for interface in interfaces:
 
     data1.to_csv('Cisco-5548-01/' + name + '.csv')
 
-')
 
 #Create a simple html page to display the graphs
 photos1 = glob.glob('Cisco-5548-01/*.jpg')
