@@ -12,12 +12,14 @@ I have created functions for the request calls, within this file you will ned to
 
 ## Graphing SL1 data
 
-Any script starting with the owrd Graph does just that, graph data. I've included a few examples that hopefully deal with the various data structures that SL! returns.
+Any script starting with the word Graph does just that, graph data. 
+I've included a few examples that hopefully deal with the various data structures that SL! returns.
 
 
 ## Updating SL1
 
 Adding, deleting or modfiying with the API.
+*Work in progress*
 
 
 ## SL1 API documentation 
