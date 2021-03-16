@@ -1,5 +1,6 @@
-## Find flapping devices, from CSC CUG
-## and re-assign to new collector group
+## Find flapping devices, from CSC CUG and re-assign to new collector group
+## Troubleshotting the seemingly constant false alerts we're seeing. 
+## 2021 03 15
 
 #!/usr/bin/env python
 
