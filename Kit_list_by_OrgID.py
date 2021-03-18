@@ -30,7 +30,7 @@ for device in devices:
     results.append({"IP": ip, "Name": name, "Vendor": vendor, "Version": ctype})
 
 #Then create CSV file with the results
-with open('Kit_list_20210318.csv', mode='w', newline='') as csv_file:
+with open('Kit_list.csv', mode='w', newline='') as csv_file:
     fieldnames = ['IP', 'Name', 'Venndor', 'Version']
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
