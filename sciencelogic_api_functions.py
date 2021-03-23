@@ -1,10 +1,11 @@
 ## SL SPI call functions to simplify API scripts.
-## 2021 03 05
+## 2021 03 23
 ## Rich Graham
+## v 0.2 - added line breaks to post_api() and delte_api() functions
 ##
-## To use from your script call: from sciencelogic_api_functions import *
-##                               from sciencelogic_api_functions import get_api
-##                               from sciencelogic_api_functions import get_api, delete_api
+## To use from your script call:
+##    import sciencelogic_api_functions as sl
+##
 
 #!/usr/bin/env python
 
@@ -14,15 +15,15 @@ import urllib3
 import time
 
 #Connection details
-root = 'https://<url>'
-user = '<api-user>'
-passwd = '<api-passwd>'
+root = 'https://monitor.cloudsoftcat.com'
+user = 'api-user'
+passwd = 'q2vB0EK7fweo7adQYlsD'
 
 ## API Functions
 
 # get_api(url) - url in '/api/xxxx' format
-#                returns data, with logic that if it sees result_set in the data
-#                it will just return the data from within the result_set
+#              - returns data, with logic that if it sees result_set in the data
+#              - it will just return the data from within the result_set
 def get_api(url):
     
     #Disable TLS errors from the output
@@ -46,7 +47,7 @@ def get_api(url):
 
 # post_api(url, upload) - url in '/api/xxxx' format
 #                       - data in json format, e.g. {"alerts": "0"}
-#                         returns success/failure
+#                       - returns success/failure
 def post_api(url,data):
 
     #Disable TLS errors from the output
@@ -57,7 +58,7 @@ def post_api(url,data):
     time.sleep(0.2)
 
     if r.status_code == 200:
-        print("API post succesfull.")
+        print("API post succesfull. "+ url +"\n")
     else:
         print("API post failed - Error: " + str(r.status_code))
 
@@ -74,10 +75,7 @@ def delete_api(url):
     time.sleep(0.2)
 
     if r.status_code == 200:
-        print("API delete succesfull.")
+        print("API delete succesfull. "+ url +"\n")
     else:
         print("API delete failed - Error: " + str(r.status_code))
     
-
-
-
