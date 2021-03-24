@@ -48,10 +48,10 @@ def get_api(url):
 
         
 # get_api2(url) - url in '/api/xxxx' format
-#                 returns data, total_matched total_returnedand
+#                 returns data, total_matched and total_returned search values
 #                 with logic that if it sees result_set in the data
 #                 usage:
-#                        data, total, returned = sl.get_api(url)
+#                        data, total_matched, total_returned = sl.get_api(url)
 def get_api2(url):
     
     #Disable TLS errors from the output
