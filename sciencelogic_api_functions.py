@@ -2,6 +2,8 @@
 ## 2021 03 23
 ## Rich Graham
 ## v 0.2 - added line breaks to post_api() and delte_api() functions
+## v 0.3 - get_api2() adding total_matched and total_returned serach values to the returned data 
+##         usage: data, total, returned = sl.get_api2(url)
 ##
 ## To use from your script call:
 ##    import sciencelogic_api_functions as sl
@@ -15,9 +17,9 @@ import urllib3
 import time
 
 #Connection details
-root = 'https://monitor.cloudsoftcat.com'
+root = 'https://your-site'
 user = 'api-user'
-passwd = 'q2vB0EK7fweo7adQYlsD'
+passwd = 'password'
 
 ## API Functions
 
@@ -43,8 +45,36 @@ def get_api(url):
             return data      
     else:
         print("API call failed - Error: " + str(r.status_code))
-    
 
+        
+# get_api2(url) - url in '/api/xxxx' format
+#                 returns data, total_matched total_returnedand
+#                 with logic that if it sees result_set in the data
+#                 usage:
+#                        data, total, returned = sl.get_api(url)
+def get_api2(url):
+    
+    #Disable TLS errors from the output
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    PYTHONWARNINGS="ignore:Unverified HTTPS request"
+
+    r = requests.get( root + url, auth=HTTPBasicAuth(user,passwd),verify=False,timeout=10 )
+    time.sleep(0.2)
+
+    if r.status_code == 200:
+        data = r.json()
+        total = data["total_matched"]
+        returned = data["total_returned"]
+
+        if "result_set" in data:
+            data = data["result_set"]
+            return data, total, returned
+        else:
+            return data, total, returned      
+    else:
+        print("API call failed - Error: " + str(r.status_code))
+        
+        
 # post_api(url, upload) - url in '/api/xxxx' format
 #                       - data in json format, e.g. {"alerts": "0"}
 #                       - returns success/failure
