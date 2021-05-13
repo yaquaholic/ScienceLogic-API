@@ -26,3 +26,4 @@ Adding, deleting or modfiying with the API.
 1. [ScienceLogic API documentation](https://docs.sciencelogic.com/latest/Content/Web_Content_Dev_and_Integration/ScienceLogic_API/api_intro.htm)
 2. [ScienceLogic API schema](https://documenter.getpostman.com/view/4238205/SWE56ysV)
 3. [ScienceLogic GitHub](https://github.com/ScienceLogic)
+4. [SLAM-UG](https://gitlab.com/slam-ug)
