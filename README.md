@@ -13,7 +13,7 @@ I have created functions for the request calls, within this file you will need t
 ## Graphing SL1 data
 
 Any script starting with the word Graph does just that, graph data. I've included a few examples that hopefully deal with the various data structures that SL1 returns.
-You'll need pandas and matplotlib installed to plot the graphs and dominate for the html creation. 
+You'll need [Pandas](https://pandas.pydata.org) and [Matplotlib](https://matplotlib.org) installed to plot the graphs and [Dominate](https://github.com/Knio/dominate) for the html creation. 
 
 
 ## Updating SL1
