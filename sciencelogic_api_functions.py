@@ -3,9 +3,9 @@
 ## Richard Graham
 ##
 ## To use from your script call: 
-##                               import slv12 as sl
-##                               from slv12 import get_api
-##                               from slv12 import get_api, delete_api
+##                               import sciencelogic_api_functions as sl
+##                               from sciencelogic_api_functions import get_api
+##                               from sciencelogic_api_functions import get_api, delete_api
 ##
 
 #!/usr/bin/env python3
