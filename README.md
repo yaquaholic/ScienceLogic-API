@@ -19,7 +19,7 @@ I have created functions for the request calls, within this file you will need t
 4.  post_api(uri,data) - posting JSON to a URI
     post_api('/api/device/1', {"alerts": "0"})
 5.  post_api2(uri,data)
-    The same as above but with no headers. I can't remeber the use case but i needed it once.
+    The same as above but with no html headers. I can't remember the use case but I needed it once.
 6.  delete_api(url) - remove an entitiy by URI
     delete_api('/api/device/1')
 7.  epoch2human(string) - becasue epoch timestamps suck
