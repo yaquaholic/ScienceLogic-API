@@ -5,7 +5,7 @@ I have created functions for the request calls, within this file you will need t
 
 *Work in progress, bare with me please....*
 
-1. Start by copying 'sciencelogic_api_functions.py' to your Python working folder.
+1. Start by copying 'sciencelogic_api_functions.py' to your Python working folder, or to your ...\Python\3.x.x\Lib\ folder.
 2. Edit the file and update the root URL to reflect your SL1 server, then add in suitable credentials.
 3. Any new python scripts can then import sciencelogic_api_functions.
 
